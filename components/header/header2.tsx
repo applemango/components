@@ -15,7 +15,7 @@ const Header = ({ page }:Props) => {
         <div className={styles.main}>
             { Object.keys(page).length && 
                 Object.keys(page).map((p:any, index:number) => (
-                    <div className={styles.link}>
+                    <div className={styles.link} key={index}>
                         <Link href={page[p]}><a className={ router.pathname == page[p] ? styles.active : "" }>{p}</a></Link>
                     </div>
                 ))
