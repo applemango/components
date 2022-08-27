@@ -4,20 +4,21 @@ import { useRouter } from "next/router"
 
 import Link from "next/link"
 
+import useWindowSize from "../../lib/useWindowSize";
+
 import styles from "./styles/header.module.scss"
+
 type Props = {
     page: any
 }
 const Header = ({ page }:Props) => {
+    const [width, height] = useWindowSize()// for useEffect : Ln 33, Col 5
     const [position, setPosition] = useState(0)
     const [P,setP] = useState(0)
     const [P2,setP2] = useState(0)
     const [hover,setHover] = useState(false)
     const router = useRouter()
-    const eRef:any = useRef([]);
-    Object.keys(page).forEach((p, index) => {
-        eRef.current[index] = createRef()
-    })
+    const eRef:any = useRef(Object.keys(page).map(() => createRef()));
     const getRefPosition = (index:number) => {
         return !eRef.current[index].current ? position : eRef.current[index].current.offsetLeft
     }

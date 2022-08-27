@@ -1,0 +1,12 @@
+.headers {
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #eee;
+    .header {
+        background-color: #fff;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 5px 0;
+        margin: 10px 0;
+    }
+}

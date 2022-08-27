@@ -3,7 +3,9 @@ import Headers from "./_headers"
 
 const Header: NextPage = () => {
     return (
-        <Headers/>
+        <div>
+            <Headers/>
+        </div>
     )
 }
 

@@ -1,0 +1,37 @@
+.main {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 16px;
+    font-weight: 700;
+    margin: 15px auto;
+    a {
+        transition: color 0.3s ease-in-out;
+    }
+    .link {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        margin-right: 25px;
+        color: #777;
+    }
+    .link .active {
+        animation: active cubic-bezier(0.22, 1, 0.36, 1) 1s 1 alternate none running;
+        color: #24292f;
+    }
+    .link:hover {
+        color: #555;
+    }
+    .link:last-child {
+        margin-right: 0;
+    }
+}
+@keyframes active {
+    0% {
+        color: #555;
+    }
+    100% {
+        color: #24292f;
+    }
+}
