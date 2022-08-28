@@ -50,7 +50,8 @@ const Header = ({ page }:Props) => {
                             }}
                             onMouseLeave={() => setHover(false)}
                         >
-                            <Link href={page[p]}><a>{p}</a></Link>
+                            {/*<Link href={page[p]}><a>{p}</a></Link> */}
+                            <a style={{cursor: 'pointer'}}>{p}</a>
                         </div>
                     ))
                 }

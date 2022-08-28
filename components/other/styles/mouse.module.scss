@@ -1,0 +1,26 @@
+.main {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    border-radius: 100%;
+    transition: all .5s cubic-bezier(0,-0.22,.54,1.27), transform .1s cubic-bezier(0,-0.22,.82,1.96);
+    will-change: transform;
+    pointer-events: none;
+    user-select: none;
+}
+.cursor.active {
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: 1px solid #000;
+    top: -25px;
+    left: -35px;
+}
