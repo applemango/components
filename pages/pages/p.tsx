@@ -21,7 +21,7 @@ const P = () => {
             <h1 className={styles.title}>Hello, world!</h1>
             <div style={{display: "flex",overflow:"hidden",height: `calc(${h}px + 100px)`}}>
                 <div className={styles.img}>
-                    <img ref={eRef} src="/altinay-dinc-unsplash.jpg"/>
+                    <img ref={eRef} src="/components/altinay-dinc-unsplash.jpg"/>
                     <p>Photo by <a href="https://unsplash.com/@adinc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Altınay Dinç</a> on <a href="https://unsplash.com/s/photos/night?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
                 </div>
                 <div className={styles.descriptions}>
