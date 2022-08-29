@@ -16,6 +16,10 @@
     pointer-events: none;
     user-select: none;
 }
+.cursor.scroll {
+    width: 80px;
+    height: 80px;
+}
 .cursor.active {
     width: 80px;
     height: 80px;

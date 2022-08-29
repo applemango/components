@@ -1,16 +1,12 @@
-import { createRef, useState } from "react"
-import {useEffect, useRef} from 'react';
-import { useRouter } from "next/router"
-import Link from "next/link"
-
+import { useState, useEffect } from "react"
 import isUseMouse from "../../lib/isUseMouse"
-
 import styles from "./styles/mouse.module.scss"
 
 type Props = {
-    children: React.ReactNode
+    children?: React.ReactNode
+    color?: string
 }
-const Mouse = ({ children }:Props) => {
+const Mouse = ({ children, color = "#000" }:Props) => {
     const [mousePositionX, setMousePositionX] = useState(0)
     const [mousePositionY, setMousePositionY] = useState(0)
     const [show, setShow] = useState(true)
@@ -50,6 +46,8 @@ const Mouse = ({ children }:Props) => {
                 { show && (
                     <div className={`${styles.cursor} ${isSpecialHover() ? styles.active : ""}`} style={{
                         transform: `translateX(${mousePositionX}px) translateY(${mousePositionY}px)`
+                        ,border: isSpecialHover() ? `1px solid ${color}` : ""
+                        ,backgroundColor: isSpecialHover() ? "transparent" : color
                     }} />
                 )}
             </div>

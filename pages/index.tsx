@@ -16,6 +16,7 @@ const Home: NextPage = () => {
                         <Link href="/header"><a className={`${styles.underline} ${styles.simple}`}>Header</a></Link><br/>
                         <Link href="/actionmenu"><a className={`${styles.underline} ${styles.simple}`}>ActionMenu</a></Link><br/>
                         <Link href="/github"><a className={`${styles.underline} ${styles.simple}`}>Github</a></Link><br/>
+                        <Link href="/other"><a className={`${styles.underline} ${styles.simple}`}>other</a></Link><br/>
                     </div>
                 </div>
             </div>

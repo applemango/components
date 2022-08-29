@@ -10,8 +10,9 @@ import styles from "./styles/header.module.scss"
 
 type Props = {
     page: any
+    color?: string
 }
-const Header = ({ page }:Props) => {
+const Header = ({ page, color = "#24292f" }:Props) => {
     const [width, height] = useWindowSize()// for useEffect : Ln 33, Col 5
     const [position, setPosition] = useState(0)
     const [P,setP] = useState(0)
@@ -50,14 +51,15 @@ const Header = ({ page }:Props) => {
                             }}
                             onMouseLeave={() => setHover(false)}
                         >
-                            {/*<Link href={page[p]}><a>{p}</a></Link> */}
-                            <a style={{cursor: 'pointer'}}>{p}</a>
+                            {<Link href={page[p]}><a style={{cursor:"pointer",color:color}}>{p}</a></Link> }
+                            {/*<a style={{cursor: 'pointer',color:color}}>{p}</a>*/}
                         </div>
                     ))
                 }
             </div>
             <div className={styles.underline} style={{
-                left: `${P}px`
+                backgroundColor: color
+                ,left: `${P}px`
                 ,transform: `translateX(${hover ? P2 : 0}px)`
             }} />
         </div>

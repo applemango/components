@@ -1,0 +1,63 @@
+.main {
+    background-color: #141414;
+    width: 100%;
+    min-height: calc(100vh + 100px);
+    :is(h1, h2, h3, h4, h5, h6, p, a) {
+        color: #fff;
+        margin: 0;
+    }
+}
+.main .title {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    color: #fff;
+    font-size: 15vw;
+    font-weight: 700;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.descriptions {
+    position: relative;
+    width: 40%;
+    height: 100vh;
+    overflow: hidden;
+    h3 {
+        font-size: 40px;
+    }
+}
+.main .description {
+    position: relative;
+    color: #fff;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 24px;
+    animation: show ease 1s 1 alternate none running;
+}
+@keyframes show {
+    0% {
+        top: 30px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+.img {
+    width: 40vw;
+    height: 100vh;
+    margin: 0 10%;
+    > img {
+        width: 100%;
+    }
+    p {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    a {
+        text-decoration: underline;
+    }
+}
