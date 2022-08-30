@@ -18,6 +18,10 @@ const Home: NextPage = () => {
                         <Link href="/github"><a className={`${styles.underline} ${styles.simple}`}>Github</a></Link><br/>
                         <Link href="/other"><a className={`${styles.underline} ${styles.simple}`}>other</a></Link><br/>
                     </div>
+                    <p>Pages</p>
+                    <div>
+                    <Link href="/pages/p"><a className={`${styles.underline} ${styles.simple}`}>page 1</a></Link><br/>
+                    </div>
                 </div>
             </div>
         </Mouse>

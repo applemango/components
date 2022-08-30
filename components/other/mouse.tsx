@@ -46,7 +46,7 @@ const Mouse = ({ children, color = "#000" }:Props) => {
                 { show && (
                     <div className={`${styles.cursor} ${isSpecialHover() ? styles.active : ""}`} style={{
                         transform: `translateX(${mousePositionX}px) translateY(${mousePositionY}px)`
-                        ,border: isSpecialHover() ? `1px solid ${color}` : ""
+                        ,border: isSpecialHover() ? `1px solid ${color}` : `1px solid transparent`
                         ,backgroundColor: isSpecialHover() ? "transparent" : color
                     }} />
                 )}

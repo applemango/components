@@ -6,6 +6,10 @@
         color: #fff;
         margin: 0;
     }
+    :is(h1, h2, h3, h4, h5, h6, p, a)::selection {
+        color: #141414;
+        background-color: #fff;
+    }
 }
 .main .title {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
