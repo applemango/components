@@ -1,0 +1,24 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    font-size: min(24vw,128px);
+    color: rgb(55,237,203);;
+    background: linear-gradient(90deg, rgba(55,237,203,1) 0%, rgba(100,136,240,1) 35%, rgba(173,137,218,1) 50%, rgba(255,139,194,1) 70%, rgba(255,78,78,1) 90%);
+    background: linear-gradient(90deg, rgba(55,237,203,1) 0%, rgba(100,136,240,1) 35%, rgba(173,137,218,1) 57%, rgba(255,139,194,1) 72%, rgba(255,78,78,1) 90%);
+    background: linear-gradient(90deg, rgba(55,237,203,1) 0%, rgba(100,136,240,1) 44%, rgba(173,137,218,1) 57%, rgba(255,139,194,1) 72%, rgba(255,78,78,1) 90%);
+    background: linear-gradient(90deg, rgba(55,237,203,1) 0%, rgba(100,185,240,1) 32%, rgba(100,136,240,1) 45%, rgba(173,137,218,1) 57%, rgba(255,139,194,1) 72%, rgba(255,78,78,1) 90%);
+    background: linear-gradient(90deg, rgba(55,237,203,1) 0%, rgba(100,185,240,1) 32%, rgba(100,136,240,1) 45%, rgba(173,137,218,1) 57%, rgba(255,139,194,1) 67%, rgba(246,105,172,1) 75%, rgba(255,78,78,1) 90%);
+    background: linear-gradient(90deg, rgba(55,237,203,1) 0%, rgba(100,185,240,1) 32%, rgba(100,136,240,1) 45%, rgba(173,137,218,1) 57%, rgba(255,139,194,1) 67%, rgba(255,136,193,1) 75%, rgba(255,78,78,1) 90%);
+    background: linear-gradient(90deg, rgba(55,237,203,1) 0%, rgba(100,185,240,1) 32%, rgba(100,136,240,1) 45%, rgba(173,137,218,1) 57%, rgba(255,139,194,1) 67%, rgba(255,136,193,1) 75%, rgba(255,27,93,1) 90%);
+    background: linear-gradient(90deg, rgba(55,237,203,1) 0%, rgba(100,185,240,1) 32%, rgba(100,136,240,1) 45%, rgba(173,137,218,1) 57%, rgba(255,139,194,1) 67%, rgba(255,136,193,1) 75%, rgba(255,49,108,1) 90%);
+    background: linear-gradient(90deg, rgba(55,237,203,1) 0%, rgba(100,185,240,1) 32%, rgba(100,136,240,1) 45%, rgba(173,137,218,1) 57%, rgba(255,139,194,1) 67%, rgba(255,136,193,1) 75%, rgba(255,43,104,1) 90%);
+    background: linear-gradient(90deg, rgba(55,237,203,1) 0%, rgba(100,185,240,1) 32%, rgba(100,136,240,1) 45%, rgba(173,137,218,1) 57%, rgba(255,139,194,1) 67%, rgba(255,136,193,1) 75%, rgba(255,43,83,1) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
