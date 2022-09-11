@@ -35,4 +35,24 @@
     background: linear-gradient(62deg, rgba(55,237,203,1) 0%, rgba(103,195,255,1) 32%, rgba(55,143,255,1) 43%, rgba(113,140,255,1) 48%, rgba(135,143,255,1) 51%, rgba(194,145,255,1) 58%, rgba(219,146,244,1) 68%, rgba(255,139,194,1) 82%, rgba(255,94,141,1) 90%, rgba(255,52,94,1) 95%, rgba(255,26,69,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: 0;
+    text-align: center;
+}
+.input {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    width: 100vw !important;
+    min-width: 100px;
+    border: 1px solid #d0d7de;
+    text-align: center;
+
+    font-size: min(24vw,128px);
+    /*background: linear-gradient(62deg, rgba(55,237,203,1) 0%, rgba(103,195,255,1) 32%, rgba(55,143,255,1) 43%, rgba(113,140,255,1) 48%, rgba(135,143,255,1) 51%, rgba(194,145,255,1) 58%, rgba(219,146,244,1) 68%, rgba(255,139,194,1) 82%, rgba(255,94,141,1) 90%, rgba(255,52,94,1) 95%, rgba(255,26,69,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
 }
