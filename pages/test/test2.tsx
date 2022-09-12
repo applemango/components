@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import styles from './styles/test1.module.scss'
 import 'katex/dist/katex.min.css';
 import { BlockMath } from 'react-katex';
+import { ROF, ROF3, SROF } from "./math/1"
 //npm install --save --legacy-peer-deps react-katex
 
 const TEST: NextPage = () => {
@@ -40,12 +41,12 @@ const TEST: NextPage = () => {
                                 { ((b*-1) + Math.sqrt((b*b)-(4*a*c)))/(2*a)%1 == 0 ? (
                                     <BlockMath math={`x= {${((b*-1) + Math.sqrt((b*b)-(4*a*c))) / (2*a)}}`} />
                                 ): (
-                                    <BlockMath math={`x= {${(b*-1) + Math.sqrt((b*b)-(4*a*c))} \\over ${2*a}}`} />
+                                    <BlockMath math={`x= {${ROF((b*-1) + Math.sqrt((b*b)-(4*a*c)),2*a)[0]} \\over ${ROF((b*-1) + Math.sqrt((b*b)-(4*a*c)),2*a)[1]}}`} />
                                 )}
                                 { ((b*-1) - Math.sqrt((b*b)-(4*a*c)))/(2*a)%1 == 0 ? (
                                     <BlockMath math={`x= {${((b*-1) - Math.sqrt((b*b)-(4*a*c))) / (2*a)}}`} />
                                 ): (
-                                    <BlockMath math={`x= {${(b*-1) - Math.sqrt((b*b)-(4*a*c))} \\over ${2*a}}`} />
+                                    <BlockMath math={`x= {${ROF((b*-1) - Math.sqrt((b*b)-(4*a*c)),2*a)[0]} \\over ${ROF((b*-1) - Math.sqrt((b*b)-(4*a*c)),2*a)[1]}}`} />
                                 )}
                             </div>
                         ): (
@@ -53,7 +54,13 @@ const TEST: NextPage = () => {
                         )}
                     </div>
                 ): (
-                    <BlockMath math={`x= {${b*-1}\\pm \\sqrt{${(b*b)-(4*a*c)}} \\over ${2*a}}`} />
+                    <div>
+                        { (SROF((b*b)-(4*a*c)).length != 1 && SROF((b*b)-(4*a*c))[0] != 1) ? (
+                            <BlockMath math={`x= {${ROF3(b*-1,SROF((b*b)-(4*a*c))[0],2*a)[0]}\\pm ${ROF3(b*-1,SROF((b*b)-(4*a*c))[0],2*a)[1] != 1 ? ROF3(b*-1,SROF((b*b)-(4*a*c))[0],2*a)[1] : ""}\\sqrt{${SROF((b*b)-(4*a*c))[1]}} \\over ${ROF3(b*-1,SROF((b*b)-(4*a*c))[0],2*a)[2]}}`} />//<BlockMath math={`x= {${b*-1}\\pm ${SROF((b*b)-(4*a*c))[0]}\\sqrt{${SROF((b*b)-(4*a*c))[1]}} \\over ${2*a}}`} />
+                        ):(
+                            <BlockMath math={`x= {${b*-1}\\pm \\sqrt{${(b*b)-(4*a*c)}} \\over ${2*a}}`} />
+                        )}
+                    </div>
                 )}
                 <div style={{
                     position: 'absolute'
@@ -62,7 +69,7 @@ const TEST: NextPage = () => {
                     ,marginLeft: "0"
                     ,transform: "scale(0.8)"
                 }}>
-                    <BlockMath math={`a=${a},　b=${b},　c=${c}`} />
+                    <BlockMath math={`a=${a},b=${b},c=${c}`} />
                 </div>
             </div>
         </div>
