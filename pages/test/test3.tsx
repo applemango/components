@@ -6,26 +6,33 @@ import 'katex/dist/katex.min.css';
 import { BlockMath } from 'react-katex';
 import { ROF, ROF3, SROF } from "../../lib/math/1"
 //npm install --save --legacy-peer-deps react-katex
-
+type n = number
+type s = string
+type tf = boolean
 const TEST: NextPage = () => {
     const router = useRouter()
-    const [a, setA] = useState(0)
-    const [b, setB] = useState(0)
-    const [c, setC] = useState(0)
+    const [a, setA] = useState<n>(0)
+    const [b, setB] = useState<n>(0)
+    const [c, setC] = useState<n>(0)
+    const [n, setN] = useState<tf>(false)
     useEffect(() => {
         if(router.query.a && router.query.b && router.query.c) {
             setA(Number(router.query.a))
             setB(Number(router.query.b))
             setC(Number(router.query.c))
+            setN(true)
+            if(router.query.a == "0" && router.query.b == "0" && router.query.c == "0") {
+                setN(false)
+            }
         }
     },[router.query])
     function main(a: number, b: number, c: number) {
         const a2 = ROF3(a,b,c)[0]
         const b2 = ROF3(a,b,c)[1]
         const c2 = ROF3(a,b,c)[2]
-        let one:[number, string | boolean] = [b2*-1,false]
-        let two:[number, string | boolean] = [( b2 ** 2 ) - ( 4 * a2 * c2 ),"sqrt"]
-        let three:[number, string | boolean] = [2 * a2,false]
+        let one:[n, s | tf] = [b2*-1,false]
+        let two:[n, s | tf] = [( b2 ** 2 ) - ( 4 * a2 * c2 ),"sqrt"]
+        let three:[n, s | tf] = [2 * a2,false]
         if(Math.sqrt(two[0])%1 == 0) {//rootが外れた場合
             two = [Math.sqrt(two[0]),false]
             let top = one[0]+two[0]
@@ -50,6 +57,7 @@ const TEST: NextPage = () => {
             }
         } else {
             let two_SROF = SROF(two[0])
+            console.log(SROF(80))
             if(two_SROF.length == 1) {
                 two_SROF = [1,two[0]]
             }
@@ -63,7 +71,20 @@ const TEST: NextPage = () => {
     }
     return (
         <div className={styles.main}>
-            {main(a,b,c)}
+            {!n? (
+                <div>
+                    <BlockMath math={`x∈R`} />
+                </div>
+            ):main(a,b,c)}
+            <div style={{
+                position: 'absolute'
+                ,top: 0
+                ,left: 0
+                ,marginLeft: "0"
+                ,transform: "scale(0.8)"
+            }}>
+                <BlockMath math={`a=${a},b=${b},c=${c}`} />
+            </div>
         </div>
     )
 }

@@ -48,6 +48,7 @@ export function SROF(a: number,b: number = 1):Array<number> {
                 r.push(one[i])
                 one = del(one,one.indexOf(one[i],i+1))
                 one = del(one,i)
+                i--
             }
         }
         let re = [1,1]

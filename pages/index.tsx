@@ -20,7 +20,11 @@ const Home: NextPage = () => {
                     </div>
                     <p>Pages</p>
                     <div>
-                    <Link href="/pages/p"><a className={`${styles.underline} ${styles.simple}`}>page 1</a></Link><br/>
+                        <Link href="/pages/p"><a className={`${styles.underline} ${styles.simple}`}>page 1</a></Link><br/>
+                    </div>
+                    <p>Other</p>
+                    <div>
+                        
                     </div>
                 </div>
             </div>
