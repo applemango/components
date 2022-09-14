@@ -12,16 +12,11 @@ const TEST: NextPage = () => {
     const [a, setA] = useState(0)
     const [b, setB] = useState(0)
     const [c, setC] = useState(0)
-    const [type, setType] = useState(false)
     useEffect(() => {
         if(router.query.a && router.query.b && router.query.c) {
             setA(Number(router.query.a))
             setB(Number(router.query.b))
             setC(Number(router.query.c))
-            //console.log(main(Number(router.query.a),Number(router.query.b),Number(router.query.c)))
-        }
-        if(router.query.type) {
-            setType(true)
         }
     },[router.query])
     function main(a: number, b: number, c: number) {
@@ -36,12 +31,13 @@ const TEST: NextPage = () => {
             let top = one[0]+two[0]
             let top2 = one[0]-two[0]
             let bottom = three[0]
-            let top_M = top < 0
-            let top2_M = top2 < 0
-            let top_ROF = ROF(Math.abs(top),bottom)
-            let top2_ROF = ROF(Math.abs(top2),bottom)
+            let top_M = top < 0 || bottom < 0
+            let top2_M = top2 < 0 || bottom < 0
+            let top_ROF = ROF(Math.abs(top),Math.abs(bottom))
+            let top2_ROF = ROF(Math.abs(top2),Math.abs(bottom))
             if(top_ROF[0] == top2_ROF[0] && top_ROF[1] == top2_ROF[1]) {
-                return <BlockMath math={`x= ${top_ROF[0]} \\over ${top_ROF[1]}`}/>
+                let a = `${top_ROF[0]} \\over ${top_ROF[1]}`
+                return <BlockMath math={`x= ${top_M ? "-" : ""} ${top_ROF[1] == 1 ? top_ROF[0] : a}`}/>
             } else {
                 let a = `{${top_ROF[0]} \\over ${top_ROF[1]}}`
                 let b = `{${top2_ROF[0]} \\over ${top2_ROF[1]}}`
@@ -51,14 +47,7 @@ const TEST: NextPage = () => {
                         ,${top2_M ? "-" : ""} ${top2_ROF[1] == 1 ? top2_ROF[0] : b}`}
                     />
                 </div>
-                //x= ${top_M ? "-" : ""} {${top_ROF[0]} \\over ${top_ROF[1]}}
-                //,${top2_M ? "-" : ""} {${top2_ROF[0]} \\over ${top2_ROF[1]}}
             }
-            return <BlockMath math={`x=0`} />
-            return [
-                `${top}/${bottom}`
-                ,`${top2}/${bottom}`
-            ]
         } else {
             let two_SROF = SROF(two[0])
             if(two_SROF.length == 1) {
@@ -68,11 +57,8 @@ const TEST: NextPage = () => {
             one[0] = all_ROF[0]
             two_SROF[0] = all_ROF[1]
             three[0] = all_ROF[2]
-            //console.log(`x=${one[0]}±root_${two_SROF[0]}_${two_SROF[1]}/${three[0]}`)
-            //three[0] = ROF()
-            //console.log(SROF(20))
-            //console.log(two_SROF)
-            return <BlockMath math={`x= {${one[0]}\\pm ${two_SROF[0] == 1 ? "" : two_SROF[1]}\\sqrt{${two_SROF[1]}} \\over ${three[0]}}`} />
+            let bottom = `\\over ${three[0]}`
+            return <BlockMath math={`x= {${one[0]}\\pm ${two_SROF[0] == 1 ? "" : two_SROF[0]}\\sqrt{${two_SROF[1]}} ${three[0] == 1 ? "" : bottom}}`} />
         }
     }
     return (

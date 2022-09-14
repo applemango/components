@@ -30,9 +30,6 @@ export function SROF(a: number,b: number = 1):Array<number> {
                 return t(one/i,[...tow,i])
             }
         }
-        //console.log([one, [one,...tow]])
-        //return [one, [...tow]]
-        //return [one, [one,...tow]]
         return [one, ...tow]
     }
     const del = (one:Array<number>, index:number) => {
@@ -66,10 +63,5 @@ export function SROF(a: number,b: number = 1):Array<number> {
         }
         return re
     }
-    //console.log(tm(t(a)))
     return tm(t(a))
-    //console.log(tm(t(a)[1]))
-    //console.log(tm(t(a)[1])[0],t(a)[0] * tm(t(a)[1])[1])
-    //return [tm(t(a)[1])[0],t(a)[0] * tm(t(a)[1])[1]]
-    //return t(a)//[t(a)[0],tm(t(a)[1])]
 }
