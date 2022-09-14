@@ -57,7 +57,6 @@ const TEST: NextPage = () => {
             }
         } else {
             let two_SROF = SROF(two[0])
-            console.log(SROF(80))
             if(two_SROF.length == 1) {
                 two_SROF = [1,two[0]]
             }

@@ -24,7 +24,7 @@ const Home: NextPage = () => {
                     </div>
                     <p>Other</p>
                     <div>
-                        
+                    <Link href="/test/test3?a=0&b=0&c=0"><a className={`${styles.underline} ${styles.simple}`}>quadratic equation</a></Link><br/>
                     </div>
                 </div>
             </div>
