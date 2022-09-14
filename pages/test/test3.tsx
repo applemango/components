@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import styles from './styles/test1.module.scss'
 import 'katex/dist/katex.min.css';
 import { BlockMath } from 'react-katex';
-import { ROF, ROF3, SROF } from "./math/1"
+import { ROF, ROF3, SROF } from "../../lib/math/1"
 //npm install --save --legacy-peer-deps react-katex
 
 const TEST: NextPage = () => {
