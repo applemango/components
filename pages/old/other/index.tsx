@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 
-import Scroll from "../../components/other/scroll"
-import Mouse from '../../components/other/mouse'
+import Scroll from "../../../components/other/scroll"
+import Mouse from '../../../components/other/mouse'
 
 const Other: NextPage = () => {
     return (

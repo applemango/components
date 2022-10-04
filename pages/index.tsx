@@ -1,34 +1,43 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from './styles/Home.module.scss'
+import styles from './styles/index.module.scss'
 
 import Mouse from '../components/other/mouse'
 
 const Home: NextPage = () => {
     return (
-        <Mouse>
-            <div className={styles.main}>
-                <Head><title>Hello, world!</title></Head>
-                <div>
-                    <p>Components</p>
-                    <div>
-                        <Link href="/header"><a className={`${styles.underline} ${styles.simple}`}>Header</a></Link><br/>
-                        <Link href="/actionmenu"><a className={`${styles.underline} ${styles.simple}`}>ActionMenu</a></Link><br/>
-                        <Link href="/github"><a className={`${styles.underline} ${styles.simple}`}>Github</a></Link><br/>
-                        <Link href="/other"><a className={`${styles.underline} ${styles.simple}`}>other</a></Link><br/>
-                    </div>
-                    <p>Pages</p>
-                    <div>
-                        <Link href="/pages/p"><a className={`${styles.underline} ${styles.simple}`}>page 1</a></Link><br/>
-                    </div>
-                    <p>Other</p>
-                    <div>
-                    <Link href="/test/test3?a=0&b=0&c=0"><a className={`${styles.underline} ${styles.simple}`}>quadratic equation</a></Link><br/>
-                    </div>
+        <div className={styles.main}>
+            <div className={styles.title}>
+                <h1>UI Components</h1>
+                <p>Components Collection</p>
+            </div>
+            <div className={styles.cards}>
+                <div className={styles.card}>
+                    <Link href="/c/input">
+                        <a>input</a>
+                    </Link>
+                </div>
+                <div className={styles.card}>
+                    <Link href="/c/github"><a>github</a></Link>
+                </div>
+                <div className={styles.card}>
+                    <Link href="/c/header"><a>header</a></Link>
                 </div>
             </div>
-        </Mouse>
+            
+            <div className={styles.title} style={{marginTop:150}}>
+                <p>page Collection</p>
+            </div>
+            <div className={styles.cards}>
+                <div className={styles.card}>
+                    <Link href="/old/pages/p"><a>test page 1</a></Link>
+                </div>
+                <div className={styles.card}>
+                    <Link href="/old/test/test3?a=0&b=0&c=0"><a>test page 2 (quadratic equation</a></Link>
+                </div>
+            </div>
+        </div>
     )
 }
 

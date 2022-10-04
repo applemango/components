@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import styles from './styles/test1.module.scss'
 import 'katex/dist/katex.min.css';
 import { BlockMath } from 'react-katex';
-import { ROF, ROF3, SROF } from "../../lib/math/1"
+import { ROF, ROF3, SROF } from "../../../lib/math/1"
 //npm install --save --legacy-peer-deps react-katex
 type n = number
 type s = string
@@ -71,9 +71,7 @@ const TEST: NextPage = () => {
     return (
         <div className={styles.main}>
             {!n? (
-                <div>
-                    <BlockMath math={`x∈R`} />
-                </div>
+                <BlockMath math={`x∈R`} />
             ):main(a,b,c)}
             <div style={{
                 position: 'absolute'

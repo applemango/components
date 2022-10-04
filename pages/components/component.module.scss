@@ -1,0 +1,24 @@
+.main {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.view {
+    padding: 20px;
+    height: 500px;
+    border: 2px solid #24292f;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    P {
+        font-size: 28px;
+        font-weight: 500;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+}

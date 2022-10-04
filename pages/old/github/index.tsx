@@ -4,8 +4,8 @@ import Link from 'next/link'
 
 import styles from '../styles/components.module.scss'
 
-import Languages from "../../components/github/languages"
-import MiniRepo from '../../components/github/minirepo'
+import Languages from "../../../components/github/languages"
+import MiniRepo from '../../../components/github/minirepo'
 
 const Github: NextPage = () => {
     return (

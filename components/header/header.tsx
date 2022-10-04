@@ -4,7 +4,7 @@ import { useRouter } from "next/router"
 
 import Link from "next/link"
 
-import useWindowSize from "../../lib/useWindowSize";
+import useWindowSize from "../../lib/hook/useWindowSize";
 
 import styles from "./styles/header.module.scss"
 

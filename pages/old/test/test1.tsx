@@ -5,9 +5,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from './styles/test1.module.scss'
 
-import useClickAway from '../../lib/useClickAway'
+import useClickAway from '../../../lib/hook/useClickAway'
 
-import { gzip, unzip } from '../../lib/gzip'
+import { gzip, unzip } from '../../../lib/gzip'
 
 const TEST: NextPage = () => {
     const [text, setText] = useState("")

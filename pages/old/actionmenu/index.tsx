@@ -2,8 +2,8 @@ import type { NextPage } from 'next'
 
 import { useState } from 'react'
 
-import ActionMenu from "../../components/actionmenu/actionmenu"
-import ActionMenu2 from "../../components/actionmenu/actionmenu2"
+import ActionMenu from "../../../components/actionmenu/actionmenu"
+import ActionMenu2 from "../../../components/actionmenu/actionmenu2"
 
 const Menu: NextPage = () => {
     const [now, setNow] = useState(0)

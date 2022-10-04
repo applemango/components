@@ -3,7 +3,7 @@ import {useEffect, useRef} from 'react';
 import { useRouter } from "next/router"
 import Link from "next/link"
 
-import useClickAway from "../../lib/useClickAway"
+import useClickAway from "../../lib/hook/useClickAway"
 
 import styles from "./styles/actionmenu.module.scss"
 

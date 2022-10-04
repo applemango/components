@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 
 import styles from "./styles/p.module.scss"
-import Header from "../../components/header/header"
+import Header from "../../../components/header/header"
 
 const P = () => {
     const eRef:any = useRef(null)
