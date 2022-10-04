@@ -1,7 +1,7 @@
 import Header from "../../../components/header/header"
 import Header2 from "../../../components/header/header2"
 
-import styles from '../styles/components.module.scss'
+import styles from '../../styles/components.module.scss'
 const Headers = () => {
     return (
         <div className={styles.headers} >
