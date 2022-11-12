@@ -22,11 +22,15 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    .card {
+    a {
+        min-width: min(80%,300px);
         margin: 15px;
+    }
+    .card {
         padding: 20px;
         min-height: 120px;
-        min-width: min(80%,300px);
+        width: 100%;
+        //min-width: min(80%,300px);
         display: flex;
         justify-content: center;
         align-items: center;
