@@ -22,6 +22,7 @@ const Home: NextPage = () => {
             <Main.A href="/c/input">input</Main.A>
             <Main.A href="/c/github">github</Main.A>
             <Main.A href="/c/header">header</Main.A>
+            <Main.A href="/c/text">text</Main.A>
         </Main.Links>
         <Main.H1>page Collection</Main.H1>
         <Main.Links>
